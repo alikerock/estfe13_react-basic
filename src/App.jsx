@@ -60,8 +60,9 @@ function App() {
       </header> */}
       <Nav
         data={content}
-        onChangeMode={() => {
+        onChangeMode={_id => {
           setMode("read");
+          setId(_id);
         }}
       />
       <MyArticle title={_title} desc={_desc} />
