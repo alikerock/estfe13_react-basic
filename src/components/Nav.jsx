@@ -1,5 +1,6 @@
 //Nav 컴포넌트
 function Nav({ data }) {
+  console.log("Nav render");
   const lists = data.map(d => (
     <li key={d.id}>
       <a href="">{d.title}</a>
