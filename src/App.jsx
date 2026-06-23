@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Myheader title={subject.title} desc={subject.desc} />
-      <Nav />
+      <Nav data={content} />
       <MyArticle title="UI/UX 개발" desc="사용자 경험을 고려한 직관적이고 반응성 높은 화면 구현" />
     </>
   );
