@@ -6,6 +6,8 @@ function MyArticle({ title, desc }) {
         <h2>{title}</h2>
         <p>{desc}</p>
       </article>
+      <button>수정</button>
+      <button>삭제</button>
     </section>
   );
 }
