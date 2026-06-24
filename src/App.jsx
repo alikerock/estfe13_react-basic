@@ -73,7 +73,7 @@ function App() {
   } else if (mode === "create") {
     _article = (
       <CreateArticle
-        onSubmit={(_title, _desc) => {
+        onSubmit={(_title, _desc, _difficulty) => {
           const newId = uuidv4();
 
           let _contents = content.concat({
