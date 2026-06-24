@@ -1,7 +1,13 @@
-function Controls() {
+function Controls({ onChangeMode }) {
   return (
     <div className="menu">
-      <button>Create</button>
+      <button
+        onClick={() => {
+          onChangeMode();
+        }}
+      >
+        Create
+      </button>
     </div>
   );
 }
