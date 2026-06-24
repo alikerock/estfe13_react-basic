@@ -23,6 +23,7 @@ function App() {
     },
     { id: 3, title: "애니메이션 구현", desc: "상태 변화에 따른 자연스럽고 동적인 화면 효과 구현" },
   ]);
+  const [maxId, setMaxid] = useState(3);
 
   const welcome = { title: "welcome", desc: "Welcome to react" };
 
@@ -43,7 +44,17 @@ function App() {
     }
     _article = <MyArticle title={_title} desc={_desc} />;
   } else if (mode === "create") {
-    _article = <CreateArticle />;
+    _article = (
+      <CreateArticle
+        onSubmit={(_title, _desc) => {
+          const newId = maxId + 1;
+
+          let _contents = content.concat({ id: newId, title: _title, desc: _desc });
+          setContent(_contents);
+          setMaxid(newId);
+        }}
+      />
+    );
   }
   return (
     <>
