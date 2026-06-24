@@ -75,16 +75,17 @@ function App() {
         title={selected.title}
         desc={selected.desc}
         onSubmit={(_title, _desc) => {
-          let _content = content.map(c =>
-            c.id === id
-              ? {
-                  ...c,
-                  title: _title,
-                  desc: _desc,
-                }
-              : c,
+          setContent(prev =>
+            prev.map(p =>
+              p.id === id
+                ? {
+                    ...p,
+                    title: _title,
+                    desc: _desc,
+                  }
+                : p,
+            ),
           );
-          setContent(_content);
           setMode("read");
         }}
       />
