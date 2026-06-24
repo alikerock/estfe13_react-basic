@@ -3,6 +3,7 @@ import Myheader from "./components/Myheader";
 import Nav from "./components/Nav";
 import MyArticle from "./components/MyArticle";
 import { useState } from "react";
+import Controls from "./components/controls";
 
 function App() {
   console.log("App render");
@@ -66,6 +67,8 @@ function App() {
         }}
       />
       <MyArticle title={_title} desc={_desc} />
+      <hr />
+      <Controls />
     </>
   );
 }
