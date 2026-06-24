@@ -18,6 +18,10 @@ function CreateArticle({ onSubmit }) {
           <label htmlFor="desc">desc</label>
           <textarea name="desc" id="desc"></textarea>
         </div>
+        <div>
+          <label htmlFor="difficulty">difficulty</label>
+          <input type="number" name="difficulty" id="difficulty" min="1" max="5" />
+        </div>
         <button>Submit</button>
       </form>
     </>
