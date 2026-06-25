@@ -7,11 +7,11 @@ const Nav = memo(function Nav({ data, onChangeMode }) {
     <li key={d.id}>
       <a
         href={`/${d.id}`}
-        data-id={d.id}
+        // data-id={d.id}
         onClick={e => {
           // console.log(e.target.dataset.id);
           e.preventDefault();
-          onChangeMode(e.target.dataset.id);
+          onChangeMode(d.id);
         }}
       >
         {d.title}
